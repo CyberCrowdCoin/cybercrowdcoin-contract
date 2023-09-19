@@ -1,0 +1,315 @@
+{
+	"id": "369549507cf9d6dd5b07a535375c307d",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.18",
+	"solcLongVersion": "0.8.18+commit.87f61d96",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"ccc/external/ApproveAndCallFallback.sol": {
+				"content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\npragma experimental ABIEncoderV2;\n\nabstract contract ApproveAndCallFallBack {\n  function receiveApproval(\n    address from,\n    uint256 _amount,\n    address _token,\n    bytes memory _data\n  ) external virtual;\n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"ccc/external/ApproveAndCallFallback.sol": {
+				"ApproveAndCallFallBack": {
+					"abi": [
+						{
+							"inputs": [
+								{
+									"internalType": "address",
+									"name": "from",
+									"type": "address"
+								},
+								{
+									"internalType": "uint256",
+									"name": "_amount",
+									"type": "uint256"
+								},
+								{
+									"internalType": "address",
+									"name": "_token",
+									"type": "address"
+								},
+								{
+									"internalType": "bytes",
+									"name": "_data",
+									"type": "bytes"
+								}
+							],
+							"name": "receiveApproval",
+							"outputs": [],
+							"stateMutability": "nonpayable",
+							"type": "function"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "",
+						"bytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "",
+							"opcodes": "",
+							"sourceMap": ""
+						},
+						"gasEstimates": null,
+						"legacyAssembly": null,
+						"methodIdentifiers": {
+							"receiveApproval(address,uint256,address,bytes)": "8f4ffcb1"
+						}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"from\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"receiveApproval\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"ccc/external/ApproveAndCallFallback.sol\":\"ApproveAndCallFallBack\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"ccc/external/ApproveAndCallFallback.sol\":{\"keccak256\":\"0x3a834ab73fa09fa135c805fe4e53ce0f89d63fde0a01a5bdd61ec00d69ec54de\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://5872ff99a1f4d11e4ccba38bdefe68c00d84c7dcc2b79de665843800bd0dd047\",\"dweb:/ipfs/Qmdjzibxwj8AAsqVuvwiR7nPfcibK9UsMP8ESnGCSGUHFG\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [],
+						"types": null
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"ccc/external/ApproveAndCallFallback.sol": {
+				"ast": {
+					"absolutePath": "ccc/external/ApproveAndCallFallback.sol",
+					"exportedSymbols": {
+						"ApproveAndCallFallBack": [
+							14
+						]
+					},
+					"id": 15,
+					"license": "MIT",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								"^",
+								"0.8",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "32:23:0"
+						},
+						{
+							"id": 2,
+							"literals": [
+								"experimental",
+								"ABIEncoderV2"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "56:33:0"
+						},
+						{
+							"abstract": true,
+							"baseContracts": [],
+							"canonicalName": "ApproveAndCallFallBack",
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": false,
+							"id": 14,
+							"linearizedBaseContracts": [
+								14
+							],
+							"name": "ApproveAndCallFallBack",
+							"nameLocation": "109:22:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"functionSelector": "8f4ffcb1",
+									"id": 13,
+									"implemented": false,
+									"kind": "function",
+									"modifiers": [],
+									"name": "receiveApproval",
+									"nameLocation": "145:15:0",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 11,
+										"nodeType": "ParameterList",
+										"parameters": [
+											{
+												"constant": false,
+												"id": 4,
+												"mutability": "mutable",
+												"name": "from",
+												"nameLocation": "174:4:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 13,
+												"src": "166:12:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 3,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "166:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 6,
+												"mutability": "mutable",
+												"name": "_amount",
+												"nameLocation": "192:7:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 13,
+												"src": "184:15:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_uint256",
+													"typeString": "uint256"
+												},
+												"typeName": {
+													"id": 5,
+													"name": "uint256",
+													"nodeType": "ElementaryTypeName",
+													"src": "184:7:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_uint256",
+														"typeString": "uint256"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 8,
+												"mutability": "mutable",
+												"name": "_token",
+												"nameLocation": "213:6:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 13,
+												"src": "205:14:0",
+												"stateVariable": false,
+												"storageLocation": "default",
+												"typeDescriptions": {
+													"typeIdentifier": "t_address",
+													"typeString": "address"
+												},
+												"typeName": {
+													"id": 7,
+													"name": "address",
+													"nodeType": "ElementaryTypeName",
+													"src": "205:7:0",
+													"stateMutability": "nonpayable",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"visibility": "internal"
+											},
+											{
+												"constant": false,
+												"id": 10,
+												"mutability": "mutable",
+												"name": "_data",
+												"nameLocation": "238:5:0",
+												"nodeType": "VariableDeclaration",
+												"scope": 13,
+												"src": "225:18:0",
+												"stateVariable": false,
+												"storageLocation": "memory",
+												"typeDescriptions": {
+													"typeIdentifier": "t_bytes_memory_ptr",
+													"typeString": "bytes"
+												},
+												"typeName": {
+													"id": 9,
+													"name": "bytes",
+													"nodeType": "ElementaryTypeName",
+													"src": "225:5:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_bytes_storage_ptr",
+														"typeString": "bytes"
+													}
+												},
+												"visibility": "internal"
+											}
+										],
+										"src": "160:87:0"
+									},
+									"returnParameters": {
+										"id": 12,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "264:0:0"
+									},
+									"scope": 14,
+									"src": "136:129:0",
+									"stateMutability": "nonpayable",
+									"virtual": true,
+									"visibility": "external"
+								}
+							],
+							"scope": 15,
+							"src": "91:176:0",
+							"usedErrors": []
+						}
+					],
+					"src": "32:235:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}

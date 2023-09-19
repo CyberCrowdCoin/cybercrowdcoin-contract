@@ -1,0 +1,74 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_amount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "receiveApproval",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ccc/external/ApproveAndCallFallback.sol": "ApproveAndCallFallBack"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ccc/external/ApproveAndCallFallback.sol": {
+			"keccak256": "0x3a834ab73fa09fa135c805fe4e53ce0f89d63fde0a01a5bdd61ec00d69ec54de",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5872ff99a1f4d11e4ccba38bdefe68c00d84c7dcc2b79de665843800bd0dd047",
+				"dweb:/ipfs/Qmdjzibxwj8AAsqVuvwiR7nPfcibK9UsMP8ESnGCSGUHFG"
+			]
+		}
+	},
+	"version": 1
+}

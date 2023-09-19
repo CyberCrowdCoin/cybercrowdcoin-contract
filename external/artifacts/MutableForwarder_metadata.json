@@ -1,0 +1,202 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "authority",
+						"type": "address"
+					}
+				],
+				"name": "LogSetAuthority",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "owner",
+						"type": "address"
+					}
+				],
+				"name": "LogSetOwner",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "Received",
+				"type": "event"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "authority",
+				"outputs": [
+					{
+						"internalType": "contract DSAuthority",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "contract DSAuthority",
+						"name": "authority_",
+						"type": "address"
+					}
+				],
+				"name": "setAuthority",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "owner_",
+						"type": "address"
+					}
+				],
+				"name": "setOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_target",
+						"type": "address"
+					}
+				],
+				"name": "setTarget",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "target",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"details": "For TCR Registry contracts (Registry.sol, ParamChangeRegistry.sol) we use mutable forwarders instead of using contracts directly. This is for better upgradeability. Since registry contracts fire all events related to registry entries, we want to be able to access whole history of events always on the same address. Which would be address of a MutableForwarder. When a registry contract is replaced with updated one, mutable forwarder just replaces target and all events stay still accessible on the same address.",
+			"kind": "dev",
+			"methods": {
+				"setTarget(address)": {
+					"details": "Replaces targer forwarder contract is pointing to Only authenticated user can replace target",
+					"params": {
+						"_target": "New target to proxy into"
+					}
+				}
+			},
+			"title": "Forwarder proxy contract with editable target",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ccc/external/MutableForwarder.sol": "MutableForwarder"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ccc/external/DelegateProxy.sol": {
+			"keccak256": "0xd7a7a77e0ac8dfe7e5b2c87709cec2005a0b73f8cac684b4b0ae98adc5c8e091",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bf56d233ad3417d3e903afe766786ac23bf4f3370ecb94d308085f9a8802ebcb",
+				"dweb:/ipfs/QmZVJ8BUyXS27SxsPZbWc9mMHkyzkdL8YcaiAnd5cSjN84"
+			]
+		},
+		"ccc/external/MutableForwarder.sol": {
+			"keccak256": "0xd8117a7c3a2316d5e9ab4550974abee9774bbcbb8a57f3b0e16b3fa1f83945b1",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://bf2687271dd27e0be92c09a398355a0907c0b1b76c4a852a4cd8c524062254e3",
+				"dweb:/ipfs/QmYJVe55qwdAAghMufB6RJuBSYDgsG8cPyjxKSwsyf9KeE"
+			]
+		},
+		"ccc/external/auth.sol": {
+			"keccak256": "0x971b4e156e4663b5789769fff5b43ac16ebf87f67f11bf8153bc511fb615543f",
+			"license": "GNU-3",
+			"urls": [
+				"bzz-raw://e2fe4e58e595f491caeaaff228a6a0fa8d26f020c689911a1a988dd7d0957e57",
+				"dweb:/ipfs/QmNQ7aMdhz63pa2oAy9M7tKAgp2FQoaVQQ14umdMFqXsMs"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,45 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"ccc/external/DelegateProxy.sol": "DelegateProxy"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ccc/external/DelegateProxy.sol": {
+			"keccak256": "0xd7a7a77e0ac8dfe7e5b2c87709cec2005a0b73f8cac684b4b0ae98adc5c8e091",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bf56d233ad3417d3e903afe766786ac23bf4f3370ecb94d308085f9a8802ebcb",
+				"dweb:/ipfs/QmZVJ8BUyXS27SxsPZbWc9mMHkyzkdL8YcaiAnd5cSjN84"
+			]
+		}
+	},
+	"version": 1
+}
