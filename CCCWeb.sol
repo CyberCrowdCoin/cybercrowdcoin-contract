@@ -14,7 +14,7 @@ contract CCCWeb is ApproveAndCallFallBack, DSAuth {
 
     event DemandCreated(
         address indexed newDemand,
-        address indexed creater,
+        address indexed creator,
         CCCStructs.TokenValue offeredValue,
         bytes ipfsData,
         uint256 timestamp,
