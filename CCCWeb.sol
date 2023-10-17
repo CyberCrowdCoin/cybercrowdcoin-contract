@@ -35,6 +35,7 @@ contract CCCWeb is ApproveAndCallFallBack, DSAuth {
         address indexed demand,
         address indexed candidate,
         bytes ipfsData,
+        uint256 protocolId,
         uint timestamp
   );
 
@@ -103,10 +104,10 @@ contract CCCWeb is ApproveAndCallFallBack, DSAuth {
 
 
 
-    function addCandidate(address _demandAddress, address _candidate, bytes memory _ipfsData) external {
+    function addCandidate(address _demandAddress, address _candidate, bytes memory _ipfsData, uint256 protocolId) external {
         Demand demand = Demand(_demandAddress);
-        demand.addCandidate(msg.sender, _candidate, _ipfsData);
-        
+        demand.addCandidate(msg.sender, _candidate);
+        emit CandidateAdded(_demandAddress, _candidate, _ipfsData, protocolId, timestamp());
     }
 
     /**
@@ -142,11 +143,4 @@ contract CCCWeb is ApproveAndCallFallBack, DSAuth {
         return block.number;
     }
 
-    function emitCandidateAdded(
-        address _demand,
-        address _candidate,
-        bytes memory _ipfsData
-    ) external isDemand {
-        emit CandidateAdded(_demand, _candidate, _ipfsData, timestamp());
-  }
 }

@@ -99,7 +99,7 @@ contract Demand {
      *
      * Emits {CandidateAdded} event
      */
-    function addCandidate(address _creator, address _candidate, bytes memory _ipfsData) public {
+    function addCandidate(address _creator, address _candidate) public {
         require(
             _creator == creator,
             "Only demand creator can add candidates"
@@ -114,11 +114,6 @@ contract Demand {
             "Candidate already added. Can't add duplicates"
         );
         invitedCandidates.add(_candidate);
-        cccWeb.emitCandidateAdded(
-            address(this),
-            address(_candidate),
-            _ipfsData
-        );
     }
 
 
